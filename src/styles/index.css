@@ -1,0 +1,52 @@
+/* These directives require Tailwind CSS processing via PostCSS. 
+   Make sure your build tool (e.g., webpack, Vite, CRA) is configured to use Tailwind CSS. 
+   If you want to avoid errors when loading this file directly, you can comment out these lines: */
+
+/*
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*/
+
+/* App shell heights */
+:root {
+  --header-h: 64px;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #111827;
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #111827;
+    color: #f9fafb;
+  }
+}
+
+/* Global box sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar (optional) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d1d5db; /* bg-gray-300 */
+  border-radius: 9999px;     /* rounded-full */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  back

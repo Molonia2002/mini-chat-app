@@ -1,0 +1,31 @@
+{
+  "rules": {
+    ".read": "auth != null",
+
+    "messages": {
+      ".indexOn": ["createdAt"],
+      ".read": "auth != null",
+      ".write": "auth != null",
+
+      "$msgId": {
+        ".validate": "
+          newData.hasChildren(['text','uid','displayName','createdAt']) &&
+          newData.child('text').isString() &&
+          newData.child('uid').val() == auth.uid
+        "
+      }
+    },
+
+    "subscriptions": {
+      ".read": "auth != null",
+
+      "$uid": {
+        ".write": "$uid === auth.uid",
+        ".validate": "
+          newData.isBoolean() ||
+          (newData.isString() && (newData.val() == 'true' || newData.val() == 'false'))
+        "
+      }
+    }
+  }
+}
