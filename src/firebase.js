@@ -4,12 +4,12 @@ import { getDatabase } from 'firebase/database'
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBg56M2d5Wek9tIo0ua1CO-wTHE7MucIA8",
+  apiKey: "AIza",
   authDomain: "mini-chat-app-b3d70.firebaseapp.com",
   projectId: "mini-chat-app-b3d70",
   storageBucket: "mini-chat-app-b3d70.firebasestorage.app",
-  messagingSenderId: "335739169420",
-  appId: "1:335739169420:web:7ca03bc93cf46fc7c829a9",
+  messagingSenderId: "",
+  appId: "",
   measurementId: "G-QP28M1KG7P"
 }
 
